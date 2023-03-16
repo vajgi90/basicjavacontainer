@@ -13,7 +13,7 @@ spec:
         app: kubespring-app
     spec:
       nodeSelector:
-        isdeploy: yes
+        isdeploy: deploy
       containers:
         - name: springboot
           image: vajgi90/kubespring
