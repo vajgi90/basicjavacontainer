@@ -12,8 +12,8 @@ spec:
       labels:
         app: kubespring-app
     spec:
-#      nodeSelector:
-#        isdeploy: deploy
+      nodeSelector:
+        isdeploy: yesdeploy
       containers:
         - name: springboot
           image: vajgi90/kubespring
@@ -60,6 +60,8 @@ metadata:
   name: kubespring-app-svc
 spec:
   type: NodePort
+  nodeSelector:
+    isdeploy: yesdeploy  
   ports:
     - port: 80
       targetPort: 8080
